@@ -12,17 +12,43 @@ import android.widget.TextView;
 
 public class CityWeatherFragment extends Fragment {
 
-    public static CityWeatherFragment create(int index) {
+    public static final String PARCEL = "parcel";
+
+    public static CityWeatherFragment create(Parcel parcel) {
         CityWeatherFragment f = new CityWeatherFragment();
         Bundle args = new Bundle();
-        args.putInt("index", index);
+        args.putSerializable(PARCEL, parcel);
         f.setArguments(args);
         return f;
     }
 
-    public int getIndex() {
-        int index = getArguments().getInt("index", 0);
-        return index;
+    public Parcel getParcel() {
+        Parcel parcel = (Parcel) getArguments().getSerializable(PARCEL);
+        return parcel;
+    }
+
+    private String getIndicatorString(String indicator_type, String value) {
+        String text = "";
+        String unit = "";
+        switch (indicator_type) {
+            case "temperature":
+                text = getResources().getString(R.string.temperature);
+                unit = getResources().getString(R.string.temperature_unit);
+                break;
+            case "wind":
+                text = getResources().getString(R.string.wind);
+                unit = getResources().getString(R.string.wind_unit);
+                break;
+            case "humidity":
+                text = getResources().getString(R.string.humidity);
+                unit = getResources().getString(R.string.humidity_unit);
+                break;
+            case "pressure":
+                text = getResources().getString(R.string.pressure);
+                unit = getResources().getString(R.string.pressure_unit);
+                break;
+        }
+        return text + ": " + value + " " + unit;
     }
 
     @Override
@@ -34,15 +60,12 @@ public class CityWeatherFragment extends Fragment {
         TextView humidityView = (TextView) layout.findViewById(R.id.humidity_view);
         TextView pressureView = (TextView) layout.findViewById(R.id.pressure_view);
         TypedArray cities = getResources().obtainTypedArray(R.array.cities);
-        TypedArray temperature = getResources().obtainTypedArray(R.array.temperature);
-        TypedArray wind = getResources().obtainTypedArray(R.array.wind);
-        TypedArray humidity = getResources().obtainTypedArray(R.array.humidity);
-        TypedArray pressure = getResources().obtainTypedArray(R.array.pressure);
-        cityNameView.setText(cities.getText(getIndex()).toString());
-        temperatureView.setText(temperature.getText(getIndex()).toString());
-        windView.setText(wind.getText(getIndex()).toString());
-        humidityView.setText(humidity.getText(getIndex()).toString());
-        pressureView.setText(pressure.getText(getIndex()).toString());
+        Parcel parcel = getParcel();
+        cityNameView.setText(parcel.getCityName());
+        temperatureView.setText(getIndicatorString("temperature", parcel.getTemperature()));
+        windView.setText(getIndicatorString("wind", parcel.getWind()));
+        humidityView.setText(getIndicatorString("humidity", parcel.getHumidity()));
+        pressureView.setText(getIndicatorString("pressure", parcel.getPressure()));
         return layout;
     }
 

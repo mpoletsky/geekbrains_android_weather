@@ -15,13 +15,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import static com.example.mpoletsky.myapplication.CityWeatherFragment.PARCEL;
+
 public class CitiesFragment extends Fragment {
 
     private ListView listView;
+
     private TextView emptyTextView;
 
     boolean isLandscape;
-    int currentPosition = 0;
+
+    Parcel currentParcel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,19 +46,26 @@ public class CitiesFragment extends Fragment {
         isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
         if (savedInstanceState != null) {
-            currentPosition = savedInstanceState.getInt("currentCity", 0);
+            currentParcel = (Parcel) savedInstanceState.getSerializable("CurrentCity");
+        } else {
+            currentParcel = new Parcel(0, getResources().getTextArray(R.array.cities)[0].toString(),
+                    getResources().getTextArray(R.array.temperature)[0].toString(),
+                    getResources().getTextArray(R.array.wind)[0].toString(),
+                    getResources().getTextArray(R.array.humidity)[0].toString(),
+                    getResources().getTextArray(R.array.pressure)[0].toString()
+            );
         }
 
         if (isLandscape) {
             listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-            showCityWeather();
+            showCityWeather(currentParcel);
         }
 
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putInt("CurrentCity", currentPosition);
+        outState.putSerializable("CurrentCity", currentParcel);
         super.onSaveInstanceState(outState);
     }
 
@@ -72,18 +83,23 @@ public class CitiesFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                currentPosition = position;
-                showCityWeather();
+                String cityName = getResources().obtainTypedArray(R.array.cities).getText(position).toString();
+                String temperature = getResources().obtainTypedArray(R.array.temperature).getText(position).toString();
+                String wind = getResources().obtainTypedArray(R.array.wind).getText(position).toString();
+                String humidity = getResources().obtainTypedArray(R.array.humidity).getText(position).toString();
+                String pressure = getResources().obtainTypedArray(R.array.pressure).getText(position).toString();
+                currentParcel = new Parcel(position, cityName, temperature, wind, humidity, pressure);
+                showCityWeather(currentParcel);
             }
         });
     }
 
-    private void showCityWeather() {
+    private void showCityWeather(Parcel parcel) {
         if (isLandscape) {
-            listView.setItemChecked(currentPosition, true);
+            listView.setItemChecked(parcel.getIndex(), true);
             CityWeatherFragment detail = (CityWeatherFragment) getFragmentManager().findFragmentById(R.id.city_weather);
-            if (detail == null || detail.getIndex() != currentPosition) {
-                detail = CityWeatherFragment.create(currentPosition);
+            if (detail == null || detail.getParcel().getIndex() != parcel.getIndex()) {
+                detail = CityWeatherFragment.create(parcel);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.city_weather, detail);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -92,7 +108,7 @@ public class CitiesFragment extends Fragment {
         } else {
             Intent intent = new Intent();
             intent.setClass(getActivity(), CityWeatherActivity.class);
-            intent.putExtra("index", currentPosition);
+            intent.putExtra(PARCEL, parcel);
             startActivity(intent);
         }
     }

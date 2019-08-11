@@ -10,35 +10,35 @@
     </string-array>
 
     <string-array name="temperature">
-        <item>Temperature: +10 C</item>>
-        <item>Temperature: +11 C</item>>
-        <item>Temperature: +12 C</item>>
-        <item>Temperature: +13 C</item>>
-        <item>Temperature: +14 C</item>>
+        <item>+10</item>>
+        <item>+11</item>>
+        <item>+12</item>>
+        <item>+13</item>>
+        <item>+14</item>>
     </string-array>
 
     <string-array name="wind">
-        <item>Wind speed: 3 m/s</item>>
-        <item>Wind speed: 4 m/s</item>>
-        <item>Wind speed: 5 m/s</item>>
-        <item>Wind speed: 6 m/s</item>>
-        <item>Wind speed: 7 m/s</item>>
+        <item>3</item>>
+        <item>4</item>>
+        <item>5</item>>
+        <item>6</item>>
+        <item>7</item>>
     </string-array>
 
     <string-array name="humidity">
-        <item>Relative humidity: 50%</item>>
-        <item>Relative humidity: 51%</item>>
-        <item>Relative humidity: 52%</item>>
-        <item>Relative humidity: 53%</item>>
-        <item>Relative humidity: 54%</item>>
+        <item>50</item>>
+        <item>51</item>>
+        <item>52</item>>
+        <item>53</item>>
+        <item>54</item>>
     </string-array>
 
     <string-array name="pressure">
-        <item>Atmosphere pressure: 1 bar</item>>
-        <item>Atmosphere pressure: 2 bar</item>>
-        <item>Atmosphere pressure: 3 bar</item>>
-        <item>Atmosphere pressure: 4 bar</item>>
-        <item>Atmosphere pressure: 5 bar</item>>
+        <item>1</item>>
+        <item>2</item>>
+        <item>3</item>>
+        <item>4</item>>
+        <item>5</item>>
     </string-array>
 
 </resources>

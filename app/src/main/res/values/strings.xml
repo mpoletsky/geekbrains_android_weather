@@ -6,9 +6,13 @@
     <string name="show_humidity_checkbox">Relative humidity</string>
     <string name="show_pressure_checkbox">Atmosphere pressure</string>
     <string name="city_hint">Input city</string>
-    <string name="temperature">Temperature: +10 C</string>
-    <string name="wind">Wind speed: 3 m/s</string>
-    <string name="humidity">Relative humidity: 50%</string>
-    <string name="pressure">Atmosphere pressure: 1 bar</string>
+    <string name="temperature">Temperature</string>
+    <string name="wind">Wind speed</string>
+    <string name="humidity">Relative humidity</string>
+    <string name="pressure">Atmosphere pressure</string>
+    <string name="temperature_unit">C</string>
+    <string name="wind_unit">m/s</string>
+    <string name="humidity_unit">%</string>
+    <string name="pressure_unit">bar</string>
     <string name="empty">Empty</string>
 </resources>
