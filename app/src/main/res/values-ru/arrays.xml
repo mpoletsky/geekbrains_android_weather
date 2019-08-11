@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item>Москва</item>>
+        <item>Санкт-Петербург</item>>
+        <item>Екатеринбург</item>>
+        <item>Новосибирск</item>>
+        <item>Омск</item>>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>Температура: +10 C</item>>
+        <item>Температура: +11 C</item>>
+        <item>Температура: +12 C</item>>
+        <item>Температура: +13 C</item>>
+        <item>Температура: +14 C</item>>
+    </string-array>
+
+    <string-array name="wind">
+        <item>Скорость ветра: 3 м/c</item>>
+        <item>Скорость ветра: 4 м/c</item>>
+        <item>Скорость ветра: 5 м/c</item>>
+        <item>Скорость ветра: 6 м/c</item>>
+        <item>Скорость ветра: 7 м/c</item>>
+    </string-array>
+
+    <string-array name="humidity">
+        <item>Относительная влажность: 50%</item>>
+        <item>Относительная влажность: 51%</item>>
+        <item>Относительная влажность: 52%</item>>
+        <item>Относительная влажность: 53%</item>>
+        <item>Относительная влажность: 54%</item>>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>Атмосферное давление: 1 бар</item>>
+        <item>Атмосферное давление: 2 бар</item>>
+        <item>Атмосферное давление: 3 бар</item>>
+        <item>Атмосферное давление: 4 бар</item>>
+        <item>Атмосферное давление: 5 бар</item>>
+    </string-array>
+
+</resources>

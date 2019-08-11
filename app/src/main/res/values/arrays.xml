@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cities">
+        <item>Moscow</item>>
+        <item>St. Petersburg</item>>
+        <item>Ekaterinburg</item>>
+        <item>Novosibirsk</item>>
+        <item>Omsk</item>>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>Temperature: +10 C</item>>
+        <item>Temperature: +11 C</item>>
+        <item>Temperature: +12 C</item>>
+        <item>Temperature: +13 C</item>>
+        <item>Temperature: +14 C</item>>
+    </string-array>
+
+    <string-array name="wind">
+        <item>Wind speed: 3 m/s</item>>
+        <item>Wind speed: 4 m/s</item>>
+        <item>Wind speed: 5 m/s</item>>
+        <item>Wind speed: 6 m/s</item>>
+        <item>Wind speed: 7 m/s</item>>
+    </string-array>
+
+    <string-array name="humidity">
+        <item>Relative humidity: 50%</item>>
+        <item>Relative humidity: 51%</item>>
+        <item>Relative humidity: 52%</item>>
+        <item>Relative humidity: 53%</item>>
+        <item>Relative humidity: 54%</item>>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>Atmosphere pressure: 1 bar</item>>
+        <item>Atmosphere pressure: 2 bar</item>>
+        <item>Atmosphere pressure: 3 bar</item>>
+        <item>Atmosphere pressure: 4 bar</item>>
+        <item>Atmosphere pressure: 5 bar</item>>
+    </string-array>
+
+</resources>
