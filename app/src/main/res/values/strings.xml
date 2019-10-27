@@ -15,4 +15,7 @@
     <string name="humidity_unit">%</string>
     <string name="pressure_unit">bar</string>
     <string name="empty">Empty</string>
+    <string name="about">About</string>
+    <string name="about_title">About</string>
+    <string name="about_content">Version: 1.0.0\nAuthor: Poletsky Maksim/nCreated: October 2019</string>
 </resources>

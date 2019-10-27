@@ -15,4 +15,7 @@
     <string name="humidity_unit">%</string>
     <string name="pressure_unit">бар</string>
     <string name="empty">Пусто</string>
+    <string name="about">О программе</string>
+    <string name="about_title">О программе</string>
+    <string name="about_content">Версия: 1.0.0\nАвтор: Полецкий Максим\nРазработана: Октябрь 2019</string>
 </resources>

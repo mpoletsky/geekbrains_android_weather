@@ -29,6 +29,7 @@ public class CitiesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!onCreateView");
         return inflater.inflate(R.layout.fragment_list, container, false);
     }
 
@@ -37,10 +38,12 @@ public class CitiesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
         initList();
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!onViewCreated");
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!onActivityCreated");
         super.onActivityCreated(savedInstanceState);
 
         isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
@@ -65,6 +68,7 @@ public class CitiesFragment extends Fragment {
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!onSaveInstanceState");
         outState.putSerializable("CurrentCity", currentParcel);
         super.onSaveInstanceState(outState);
     }
@@ -75,8 +79,13 @@ public class CitiesFragment extends Fragment {
     }
 
     private void initList() {
+        System.out.println("!!!!!!!!!!!!!!!!! New list created");
+
         ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.cities, android.R.layout.simple_list_item_activated_1);
+
         listView.setAdapter(adapter);
+
+//        System.out.println("!!!!!!!Checked item position = " + listView.getCheckedItemPosition());
 
         listView.setEmptyView(emptyTextView);
 
@@ -92,11 +101,16 @@ public class CitiesFragment extends Fragment {
                 showCityWeather(currentParcel);
             }
         });
+
     }
+
 
     private void showCityWeather(Parcel parcel) {
         if (isLandscape) {
+            System.out.println("!!!!!!!Index = " + parcel.getIndex());
+            System.out.println("!!!!!!!Checked item position = " + listView.getCheckedItemPosition());
             listView.setItemChecked(parcel.getIndex(), true);
+            System.out.println("!!!!!!!Checked item position = " + listView.getCheckedItemPosition());
             CityWeatherFragment detail = (CityWeatherFragment) getFragmentManager().findFragmentById(R.id.city_weather);
             if (detail == null || detail.getParcel().getIndex() != parcel.getIndex()) {
                 detail = CityWeatherFragment.create(parcel);
