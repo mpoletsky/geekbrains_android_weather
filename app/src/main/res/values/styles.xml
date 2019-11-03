@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="weatherParameter">
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="weatherType">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textSize">20dp</item>>
+    </style>
+
 </resources>
