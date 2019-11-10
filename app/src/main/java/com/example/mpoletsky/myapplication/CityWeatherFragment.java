@@ -74,7 +74,8 @@ public class CityWeatherFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        WeatherHistoryAdapter adapter = new WeathetHistoryAdapter(data);
+        DataSourceBuilder builder = new DataSourceBuilder(getResources());
+        WeatherHistoryAdapter adapter = new WeatherHistoryAdapter(builder.build());
         recyclerView.setAdapter(adapter);
 
         return layout;

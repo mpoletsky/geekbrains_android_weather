@@ -2,6 +2,10 @@ package com.example.mpoletsky.myapplication;
 
 public class WeatherHistory {
 
+    String city;
+
+    String date;
+
     String temperature;
 
     String wind;
@@ -10,7 +14,9 @@ public class WeatherHistory {
 
     String pressure;
 
-    public WeatherHistory(String temperature, String wind, String humidity, String pressure) {
+    public WeatherHistory(String city, String date, String temperature, String wind, String humidity, String pressure) {
+        this.city = city;
+        this.date = date;
         this.temperature = temperature;
         this.wind = wind;
         this.humidity = humidity;
@@ -21,15 +27,10 @@ public class WeatherHistory {
         return temperature;
     }
 
-    public String getWind() {
-        return wind;
-    }
+    public String getWind() { return wind; }
 
-    public String getHumidity() {
-        return humidity;
-    }
+    public String getHumidity() { return humidity; }
 
-    public String getPressure() {
-        return pressure;
-    }
+    public String getPressure() { return pressure; }
+
 }
