@@ -16,78 +16,68 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/temperature_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/thermo24" />
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/temperatuere_view"
+                android:id="@+id/history_date"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/weatherParameter"/>
+                android:layout_height="wrap_content" />
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/wind_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wind24" />
-
-            <TextView
-                android:id="@+id/wind_view"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/weatherParameter"/>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/temperature_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/thermo24" />
+
+                <TextView
+                    android:id="@+id/temperatuere_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/weatherParameter"/>
+
+                <ImageView
+                    android:id="@+id/wind_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wind24" />
+
+                <TextView
+                    android:id="@+id/wind_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/weatherParameter"/>
+
+                <ImageView
+                    android:id="@+id/humidity_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gigro24" />
+
+                <TextView
+                    android:id="@+id/humidity_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/weatherParameter"/>
+
+                <ImageView
+                    android:id="@+id/pressure_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baro24" />
+
+                <TextView
+                    android:id="@+id/pressure_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/weatherParameter"/>
+
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/humidity_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/gigro24" />
-
-            <TextView
-                android:id="@+id/humidity_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/weatherParameter"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/pressure_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/baro24" />
-
-            <TextView
-                android:id="@+id/pressure_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/weatherParameter"/>
-
-        </LinearLayout>
-
     </android.support.v7.widget.CardView>
 </LinearLayout>

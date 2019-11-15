@@ -33,4 +33,6 @@ public class WeatherHistory {
 
     public String getPressure() { return pressure; }
 
+    public String getDate() { return date; }
+
 }

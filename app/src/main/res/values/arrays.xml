@@ -9,6 +9,12 @@
         <item>Omsk</item>>
     </string-array>
 
+    <string-array name="history_dates">
+        <item>14.11.2019</item>>
+        <item>13.11.2019</item>>
+        <item>12.11.2019</item>>
+    </string-array>
+
     <string-array name="temperature">
         <item>+10</item>>
         <item>+11</item>>

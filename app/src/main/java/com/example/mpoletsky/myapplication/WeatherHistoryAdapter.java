@@ -22,12 +22,15 @@ public class WeatherHistoryAdapter extends RecyclerView.Adapter<WeatherHistoryAd
 
         public TextView pressure;
 
+        public TextView history_date;
+
         public ViewHolder(View v) {
             super(v);
             temperature = v.findViewById(R.id.temperatuere_view);
             wind = v.findViewById(R.id.wind_view);
             humidity = v.findViewById(R.id.humidity_view);
             pressure = v.findViewById(R.id.pressure_view);
+            history_date = v.findViewById(R.id.history_date);
         }
     }
 
@@ -50,6 +53,7 @@ public class WeatherHistoryAdapter extends RecyclerView.Adapter<WeatherHistoryAd
         holder.wind.setText(item.getWind());
         holder.humidity.setText(item.getHumidity());
         holder.pressure.setText(item.getPressure());
+        holder.history_date.setText(item.getDate());
 
         Log.d("WeatherHistoryAdapter", "onBindViewHolder");
     }

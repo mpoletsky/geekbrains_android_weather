@@ -15,7 +15,7 @@ public class DataSourceBuilder {
         this.resources = resources;
     }
 
-    public List<WeatherHistory> build() {
+    public List<WeatherHistory> build(int index) {
         String[] cities = resources.getStringArray(R.array.cities);
         String[] temperature01 = resources.getStringArray(R.array.temperature_01);
         String[] wind01 = resources.getStringArray(R.array.wind_01);
@@ -29,12 +29,12 @@ public class DataSourceBuilder {
         String[] wind03 = resources.getStringArray(R.array.wind_03);
         String[] humidity03 = resources.getStringArray(R.array.humidity_03);
         String[] pressure03 = resources.getStringArray(R.array.pressure_03);
+        String[] history_dates = resources.getStringArray(R.array.history_dates);
 
-        for (int i = 0; i < cities.length; i++) {
-            dataSource.add(new WeatherHistory(cities[i], "01", temperature01[i], wind01[i], humidity01[i], pressure01[i]));
-            dataSource.add(new WeatherHistory(cities[i], "02", temperature02[i], wind02[i], humidity02[i], pressure02[i]));
-            dataSource.add(new WeatherHistory(cities[i], "03", temperature03[i], wind03[i], humidity03[i], pressure03[i]));
-        }
+        dataSource.add(new WeatherHistory(cities[index], history_dates[0], temperature01[index], wind01[index], humidity01[index], pressure01[index]));
+        dataSource.add(new WeatherHistory(cities[index], history_dates[1], temperature02[index], wind02[index], humidity02[index], pressure02[index]));
+        dataSource.add(new WeatherHistory(cities[index], history_dates[2], temperature03[index], wind03[index], humidity03[index], pressure03[index]));
+
         return dataSource;
     }
 }
