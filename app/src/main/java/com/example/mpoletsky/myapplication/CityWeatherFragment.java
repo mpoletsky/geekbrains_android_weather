@@ -10,11 +10,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class CityWeatherFragment extends Fragment {
 
     public static final String PARCEL = "parcel";
+
+    public List<WeatherHistory> dataSource = new ArrayList<>();
+
+    WeatherHistoryAdapter adapter;
 
     public static CityWeatherFragment create(Parcel parcel) {
         CityWeatherFragment f = new CityWeatherFragment();
@@ -61,6 +71,17 @@ public class CityWeatherFragment extends Fragment {
         TextView windView = (TextView) layout.findViewById(R.id.wind_view);
         TextView humidityView = (TextView) layout.findViewById(R.id.humidity_view);
         TextView pressureView = (TextView) layout.findViewById(R.id.pressure_view);
+        Button addToHistoryButton = layout.findViewById(R.id.add_to_history_button);
+        addToHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Date date = new Date();
+                String dateStr = String.format("%1$td %1$tB %1$tY", date);
+                dataSource.add(new WeatherHistory(getParcel().getCityName(), dateStr, getParcel().getTemperature(), getParcel().getWind(), getParcel().getHumidity(), getParcel().getPressure()));
+                adapter.notifyDataSetChanged();
+            }
+        });
+
         TypedArray cities = getResources().obtainTypedArray(R.array.cities);
         Parcel parcel = getParcel();
         cityNameView.setText(parcel.getCityName());
@@ -75,7 +96,8 @@ public class CityWeatherFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         DataSourceBuilder builder = new DataSourceBuilder(getResources());
-        WeatherHistoryAdapter adapter = new WeatherHistoryAdapter(builder.build(parcel.getIndex()));
+        dataSource = builder.build(parcel.getIndex());
+        adapter = new WeatherHistoryAdapter(dataSource);
         recyclerView.setAdapter(adapter);
 
         return layout;

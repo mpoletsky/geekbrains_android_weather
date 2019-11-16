@@ -19,4 +19,5 @@
     <string name="about_title">About</string>
     <string name="about_content">Version: 1.0.0\nAuthor: Poletsky Maksim/nCreated: October 2019</string>
     <string name="current_weather_text">Current weather</string>
+    <string name="add_to_history">Add to histry</string>
 </resources>

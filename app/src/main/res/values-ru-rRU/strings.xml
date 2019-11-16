@@ -19,4 +19,5 @@
     <string name="about_title">О программе</string>
     <string name="about_content">Версия: 1.0.0\nАвтор: Полецкий Максим\nРазработана: Октябрь 2019</string>
     <string name="current_weather_text">Текущая погода</string>
+    <string name="add_to_history">Добавить в историю</string>
 </resources>
