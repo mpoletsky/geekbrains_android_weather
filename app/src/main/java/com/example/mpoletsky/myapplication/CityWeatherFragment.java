@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -82,7 +81,6 @@ public class CityWeatherFragment extends Fragment {
             }
         });
 
-        TypedArray cities = getResources().obtainTypedArray(R.array.cities);
         Parcel parcel = getParcel();
         cityNameView.setText(parcel.getCityName());
         temperatureView.setText(getIndicatorString("temperature", parcel.getTemperature()));

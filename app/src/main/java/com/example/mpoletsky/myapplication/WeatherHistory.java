@@ -23,6 +23,8 @@ public class WeatherHistory {
         this.pressure = pressure;
     }
 
+    public String getCity() { return city; }
+
     public String getTemperature() {
         return temperature;
     }
