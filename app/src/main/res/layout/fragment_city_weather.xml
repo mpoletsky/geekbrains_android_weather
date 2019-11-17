@@ -15,6 +15,13 @@
         android:layout_margin="20px"
         android:textSize="24dp"/>
 
+    <TextView
+        android:id="@+id/current_weather_view"
+        android:text="@string/current_weather_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/weatherType"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,13 +31,13 @@
             android:id="@+id/temperature_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/thermo48" />
+            android:src="@drawable/thermo24" />
 
         <TextView
             android:id="@+id/temperatuere_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            style="@style/weatherParameter"/>
 
     </LinearLayout>
 
@@ -43,13 +50,13 @@
             android:id="@+id/wind_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wind48" />
+            android:src="@drawable/wind24" />
 
         <TextView
             android:id="@+id/wind_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            style="@style/weatherParameter"/>
 
     </LinearLayout>
 
@@ -62,13 +69,13 @@
             android:id="@+id/humidity_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/gigro48" />
+            android:src="@drawable/gigro24" />
 
         <TextView
             android:id="@+id/humidity_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            style="@style/weatherParameter"/>
 
     </LinearLayout>
 
@@ -81,14 +88,27 @@
             android:id="@+id/pressure_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baro48" />
+            android:src="@drawable/baro24" />
 
         <TextView
             android:id="@+id/pressure_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            style="@style/weatherParameter"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/add_to_history_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_history"
+        style="@style/addToHistoryButton"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/history_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -8,4 +8,10 @@
         <item>Омск</item>>
     </string-array>
 
+    <string-array name="history_dates">
+        <item>14 ноября 2019</item>>
+        <item>13 ноября 2019</item>>
+        <item>12 ноября 2019</item>>
+    </string-array>
+
 </resources>

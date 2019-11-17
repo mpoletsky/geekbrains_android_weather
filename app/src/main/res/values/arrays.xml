@@ -9,6 +9,12 @@
         <item>Omsk</item>>
     </string-array>
 
+    <string-array name="history_dates">
+        <item>November 14-th 2019</item>>
+        <item>November 13-th 2019</item>>
+        <item>November 12-th 2019</item>>
+    </string-array>
+
     <string-array name="temperature">
         <item>+10</item>>
         <item>+11</item>>
@@ -39,6 +45,102 @@
         <item>3</item>>
         <item>4</item>>
         <item>5</item>>
+    </string-array>
+
+    <string-array name="temperature_01">
+        <item>+11</item>>
+        <item>+12</item>>
+        <item>+13</item>>
+        <item>+14</item>>
+        <item>+15</item>>
+    </string-array>
+
+    <string-array name="wind_01">
+        <item>4</item>>
+        <item>5</item>>
+        <item>6</item>>
+        <item>7</item>>
+        <item>8</item>>
+    </string-array>
+
+    <string-array name="humidity_01">
+        <item>51</item>>
+        <item>52</item>>
+        <item>53</item>>
+        <item>54</item>>
+        <item>55</item>>
+    </string-array>
+
+    <string-array name="pressure_01">
+        <item>2</item>>
+        <item>3</item>>
+        <item>4</item>>
+        <item>5</item>>
+        <item>6</item>>
+    </string-array>
+
+    <string-array name="temperature_02">
+        <item>+12</item>>
+        <item>+13</item>>
+        <item>+14</item>>
+        <item>+15</item>>
+        <item>+16</item>>
+    </string-array>
+
+    <string-array name="wind_02">
+        <item>5</item>>
+        <item>6</item>>
+        <item>7</item>>
+        <item>8</item>>
+        <item>9</item>>
+    </string-array>
+
+    <string-array name="humidity_02">
+        <item>52</item>>
+        <item>53</item>>
+        <item>54</item>>
+        <item>55</item>>
+        <item>56</item>>
+    </string-array>
+
+    <string-array name="pressure_02">
+        <item>3</item>>
+        <item>4</item>>
+        <item>5</item>>
+        <item>6</item>>
+        <item>7</item>>
+    </string-array>
+
+    <string-array name="temperature_03">
+        <item>+13</item>>
+        <item>+14</item>>
+        <item>+15</item>>
+        <item>+16</item>>
+        <item>+17</item>>
+    </string-array>
+
+    <string-array name="wind_03">
+        <item>6</item>>
+        <item>7</item>>
+        <item>8</item>>
+        <item>9</item>>
+        <item>10</item>>
+    </string-array>
+
+    <string-array name="humidity_03">
+        <item>53</item>>
+        <item>54</item>>
+        <item>55</item>>
+        <item>56</item>>
+        <item>57</item>>
+    </string-array>
+
+    <string-array name="pressure_03">
+        <item>4</item>>
+        <item>5</item>>
+        <item>6</item>>
+        <item>7</item>>
+        <item>8</item>>
     </string-array>
 
 </resources>
